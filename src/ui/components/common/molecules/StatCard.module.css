@@ -1,0 +1,52 @@
+.card {
+    display: flex;
+    padding: 24px;
+    justify-content: space-between;
+    align-items: end;
+    border-radius: 20px;
+    background: #FFF;
+    flex: 1;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.name {
+    color: var(--b32);
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.value {
+    display: flex;
+    align-items: start;
+    color: var(--sc);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 88px;
+    gap: 2px;
+}
+
+.value span {
+    color: var(--sc);
+}
+
+.value i {
+    color: var(--b32);
+    line-height: 40px;
+}
+
+.icon {
+    display: flex;
+    width: 72px;
+    padding: 16px 0px;
+    justify-content: space-between;
+    align-items: flex-end;
+}

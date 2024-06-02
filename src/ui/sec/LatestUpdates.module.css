@@ -1,0 +1,72 @@
+.popular {
+    background-color: white;
+    padding-top: 40px;
+
+}
+
+.container {
+    flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    position: relative;
+
+}
+
+.slider {
+    overflow: hidden;
+
+}
+
+.productList {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+.all {
+    flex: auto !important;
+}
+
+.nextBtn {
+    position: absolute;
+    left: -32px;
+    bottom: 267px;
+    padding: 16px;
+    border: 5px solid white;
+    display: flex;
+}
+.prevBtn{
+    position: absolute;
+    right: -32px;
+    bottom: 267px;
+    padding: 16px;
+    border: 5px solid white;
+    display: flex;
+
+}
+@media(max-width: 768px) {
+    .popular {
+        overflow: hidden;
+    }
+    .slider {
+        overflow:visible
+    
+    }
+    .container {
+        gap: 24px;
+    }
+
+    button.all {
+        display: none;
+    }
+    .nextBtn, .prevBtn {
+        display: none;
+    }
+}
