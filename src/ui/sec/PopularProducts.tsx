@@ -40,7 +40,7 @@ export default function PopularProducts() {
   }, []);
 
   const vwToPx = (vw: number) => {
-    return (vw / 100) * window.innerWidth;
+    return typeof window !== "undefined" ? (vw / 100) * window.innerWidth : 100;
   };
   const swipeDistancePx = vwToPx(swipeDistanceVW);
 
@@ -90,7 +90,10 @@ export default function PopularProducts() {
           >
             {ProductsData.map((product, index) => (
               <motion.div className="flex w-auto" key={index}>
-                <ProductCard data={product} classes="lg:w-[900px] md:w-[700px]" />
+                <ProductCard
+                  data={product}
+                  classes="lg:w-[900px] md:w-[700px]"
+                />
               </motion.div>
             ))}
           </motion.div>
