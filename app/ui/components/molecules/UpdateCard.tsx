@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { DownArrows, Play, UpArrows } from "../atoms/icons";
 

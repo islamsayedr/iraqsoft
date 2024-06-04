@@ -1,9 +1,12 @@
-"use client";
-
-import { updates } from "@/app/lib/dummyData";
+// import { updates } from "@/app/lib/dummyData";
 import UpdateCard from "../ui/components/molecules/UpdateCard";
+import { fetchUpdates } from "../lib/data";
+import { Updates } from "../lib/definitions";
 
-export default function page() {
+export default async function page() {
+  const updates: Updates[] = await fetchUpdates();
+
+  console.log(updates);
   return (
     <main>
       <section className={`bg-white`}>
@@ -16,7 +19,7 @@ export default function page() {
                 id={event.id}
                 title={event.title}
                 des={event.des}
-                date={event.date}
+                date={event.date.toLocaleDateString()}
                 cover={event.cover}
               />
             ))}
