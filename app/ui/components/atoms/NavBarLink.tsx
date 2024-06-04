@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ReactNode } from "react";
+import { clsx } from "clsx";
 
 type navBarLinkProps = {
   to: string;
@@ -17,19 +18,18 @@ export default function NavBarLink({
 }: navBarLinkProps) {
   return (
     <div
-      className={` flex-1 rounded-[12px] ${
-        isActive && "bg-[#FED32B16]"
-      }`}
+      className={clsx("flex-1 rounded-[12px] w-[25%]", {
+        "bg-[#FED32B16]": isActive,
+      })}
     >
-
       <Link href={to} passHref>
         <span
-          className={`flex items-center justify-center flex-col gap-1 p-3  ${
-            isActive ? "text-[var(--yo)] font-bold" : "text-white"
-          } text-md`}
+          className={clsx(
+            "flex items-center justify-center flex-col gap-1 p-3 max-w-full text-sm ",
+            { "text-[var(--yo)] font-bold": isActive, "text-white": !isActive }
+          )}
           onClick={handleClick}
         >
-          {/* {icon} */}
           {text}
         </span>
       </Link>

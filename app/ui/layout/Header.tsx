@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
+  
   const url = `https://wa.me/+9647722284333`;
   const pathname = usePathname();
 

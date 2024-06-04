@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "./ui/globals.css";
 
-import MainLayout from "./ui/layout/MainLayout";
+import Header from "./ui/layout/Header";
+import Footer from "./ui/layout/Footer";
+import NavBar from "./ui/layout/NavBar";
 
 export const metadata: Metadata = {
   title: "عراق سوفت | البرمجيات الافضل فى العراق",
@@ -17,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="body">
-        <MainLayout>{children}</MainLayout>
+        <Header />
+        {children}
+        <Footer />
+        <NavBar />
       </body>
     </html>
   );

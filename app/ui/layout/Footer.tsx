@@ -12,6 +12,7 @@ import { FacebookRate, GoogleRate } from "../components/molecules/StarRate";
 const bgart = "./imgs/bgart02.png";
 import Subscribe from "../components/molecules/Subscribe";
 import { Facebook, Github, Telegram, Youtube } from "../components/atoms/icons";
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -25,7 +26,7 @@ export default function Footer() {
           <div className="flex flex-col w-full lg:w-2/4 gap-14 lg:pl-3 pl-0">
             {/* about */}
             <div className="flex gap-6 sm:items-center flex-col sm:flex-row">
-              <img src="./imgs/logo.svg" alt="logo" className="max-w-[150px]" />
+              <Image src="/imgs/logo.svg" alt="logo" width={102} height={127} />
               <div className="flex flex-1 flex-col gap-2 justify-items-start">
                 <h4>نبذة عن الشركة</h4>
                 <p className="max-w-[500px]">
@@ -86,11 +87,6 @@ export default function Footer() {
                       link="https://wa.me/+9647722284333"
                     />
                   </div>
-
-                  {/* <div className="flex flex-col gap-2 flex-1">
-                    <NavLink text="تواصل معنا" link="" />
-                    <NavLink text="فريق عراق سوفت" link="team" />
-                  </div> */}
                 </div>
               </div>
             </div>
