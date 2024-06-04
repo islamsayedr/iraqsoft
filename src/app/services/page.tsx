@@ -2,7 +2,7 @@ import ServiceSec from "@/src/ui/sec/ServiceSec";
 
 export default function page() {
   return (
-    <main >
+    <main>
       <ServiceSec />
     </main>
   );

@@ -5,7 +5,6 @@ import { Home, Services, Systems, Updates } from "../../../assets/icons";
 import NavBarLink from "../common/atoms/NavBarLink";
 import { usePathname } from "next/navigation";
 
-
 export default function NavBar() {
   const [active, setActive] = useState("home");
   const pathname = usePathname();

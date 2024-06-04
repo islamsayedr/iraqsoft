@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="flex flex-col w-full lg:w-2/4 gap-14 lg:pl-3 pl-0">
             {/* about */}
             <div className="flex gap-6 sm:items-center flex-col sm:flex-row">
-              <img src="./imgs/logo.svg" alt="logo" className="max-w-[150px]"/>
+              <img src="./imgs/logo.svg" alt="logo" className="max-w-[150px]" />
               <div className="flex flex-1 flex-col gap-2 justify-items-start">
                 <h4>نبذة عن الشركة</h4>
                 <p className="max-w-[500px]">

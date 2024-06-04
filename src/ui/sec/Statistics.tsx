@@ -8,7 +8,7 @@ import {
 } from "../../assets/icons/index";
 import StatCard from "../components/common/molecules/StatCard";
 // imgs
-import bgart from "../../assets/imgs/bgart01.png";
+const bgart = "./imgs/bgart01.png";
 
 export default function Statistics() {
   return (

@@ -29,7 +29,10 @@ export default function ProductCard({ data, classes }: ProductProps) {
   } = data;
 
   return (
-    <div className={`${styles.card} ${classes} transition-all ease-in cursor-pointer`} id={id}>
+    <div
+      className={`${styles.card} ${classes} transition-all ease-in cursor-pointer`}
+      id={id}
+    >
       <div
         className={`aspect-[4/3] 2xl:w-full md:w-auto w-full bg-cover bg-center rounded-[16px] md:h-full md:min-w-[312px] `}
         style={{ backgroundImage: `url(${cover})` }}
