@@ -1,0 +1,408 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-RegularItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* Condensed Styles */
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-RegularCondensed.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-RegularCondensedItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-BoldCondensed.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-BoldCondensedItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-ExtraBoldCondensed.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-ExtraBoldCondensedItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-LightCondensed.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-LightCondensedItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-ExtraLightCondensed.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: 'Somar Sans';
+    src: url('/fonts/SomarSans-ExtraLightCondensedItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: condensed;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: inherit;
+    direction: rtl;
+    font-family: 'Somar Sans', sans-serif;
+    font-style: normal;
+    color: var(--b60);
+}
+
+:root {
+    --pc: #0bbc77;
+    --sc: #3f3369;
+    --sc32: #3f336932;
+
+    --00: linear-gradient(90deg, #4FA375 0.1%, #2087A2 99.9%);
+
+    --b87: #292730;
+    --b60: #68676f;
+    --b32: #AAA9B0;
+
+    --b16: #3f336916;
+
+    --w16: #ffffff16;
+    --w87: #ffffff87;
+
+    --bg: #EEEDF1;
+    --bga: #E6F0F2;
+
+    --yo: #FED32B;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    color: #333;
+    background-color: var(--bg) !important;
+}
+
+section {
+    padding: 88px 80px;
+}
+
+section .container {
+    display: flex;
+    max-width: 1440px;
+    margin: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: '';
+    content: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+
+input,
+textarea {
+    border: none;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+    outline: none;
+}
+
+
+h1,
+h2,
+h3,
+p {
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 96px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: condensed;
+    color: #fff;
+    padding-bottom: 12px !important;
+
+}
+
+h2 {
+    color: var(--sc);
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 56px;
+}
+
+h3 {
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+h4 {
+    color: #3F3369;
+    text-align: right;
+    font-family: "Somar Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.scroll-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+::selection {
+    color: var(--b87);
+    background: var(--yo);
+}
+
+.title {
+    color: var(--sc);
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-stretch: condensed;
+    font-weight: 800;
+    line-height: 56px;
+}
+
+
+
+
+
+
+@keyframes animateBrands {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+#brandsContainerOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 15%, rgba(255, 255, 255, 0.00) 85%, #FFF 100%);
+}
+
+#brandSlider {
+    animation: animateBrands infinite linear;
+}
+
+@media(max-width: 768px) {
+    section {
+        padding: 48px 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 64px;
+
+    }
+
+
+    h3 {
+
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+    }
+}
