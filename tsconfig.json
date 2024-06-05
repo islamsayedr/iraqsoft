@@ -27,6 +27,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/systems"
-  ],
+, "app/api/tables.js"  ],
   "exclude": ["node_modules"]
 }

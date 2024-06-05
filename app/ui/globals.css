@@ -231,7 +231,7 @@ section {
 
 section .container {
     display: flex;
-    max-width: 1440px;
+    max-width: 2500px;
     margin: auto;
 }
 

@@ -7,9 +7,12 @@ export default function page() {
       <section className={`bg-white`}>
         <div className={`container flex-col md:gap-12 gap-4`}>
           <h2 className="title">قائمة الانظمة والبرامج</h2>
-          <div className="flex w-full   flex-wrap">
+          <div className="flex w-full   justify-center  flex-wrap">
             {ProductsData.map((product) => (
-              <div key={product.id} className="2xl:w-2/4 w-full 2xl:p-2 py-2">
+              <div
+                key={product.id}
+                className=" xl:w-[50%] xl:max-w-[700px] max-w-full w-full lg:p-2 py-2"
+              >
                 <ProductCard
                   data={product}
                   key={product.id}

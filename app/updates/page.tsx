@@ -6,7 +6,6 @@ import { Updates } from "../lib/definitions";
 export default async function page() {
   const updates: Updates[] = await fetchUpdates();
 
-  console.log(updates);
   return (
     <main>
       <section className={`bg-white`}>
@@ -14,14 +13,16 @@ export default async function page() {
           <h2 className="title">اخر الاخبار والتحديثات</h2>
           <div className="flex w-full gap-4 justify-center flex-wrap">
             {updates.map((event) => (
-              <UpdateCard
-                key={event.id}
-                id={event.id}
-                title={event.title}
-                des={event.des}
-                date={event.date.toLocaleDateString()}
-                cover={event.cover}
-              />
+              
+                <UpdateCard
+                  key={event.id}
+                  id={event.id}
+                  title={event.title}
+                  des={event.des}
+                  date={event.date.toLocaleDateString()}
+                  cover={event.cover}
+                />
+              
             ))}
           </div>
         </div>

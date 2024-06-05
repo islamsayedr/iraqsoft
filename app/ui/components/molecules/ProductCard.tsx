@@ -34,13 +34,13 @@ export default function ProductCard({ data, classes }: ProductProps) {
       id={id}
     >
       <div
-        className={`aspect-[4/3] 2xl:w-full md:w-auto w-full bg-cover bg-center rounded-[16px] md:h-full md:min-w-[312px] `}
+        className={`aspect-[4/3] 2xl:w-full md:w-auto w-full bg-cover bg-center rounded-[16px] md:h-full md:max-h-[300px] md:min-w-[312px] md:max-w-[312px] `}
         style={{ backgroundImage: `url(${cover})` }}
       ></div>
 
       <div className={styles.info}>
         <div className={styles.head}>
-          <h3 className={styles.name}>{name}</h3>
+          <h3 className={`${styles.name} text-nowrap truncate`}>{name}</h3>
           <span className={styles.price}>{price}$/شهر</span>
         </div>
 
