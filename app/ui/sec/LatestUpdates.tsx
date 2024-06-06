@@ -90,6 +90,7 @@ export default function LatestUpdates() {
                   des={event.des}
                   date={event.date}
                   cover={event.cover}
+                  video=""
                 />
               </motion.div>
             ))}
