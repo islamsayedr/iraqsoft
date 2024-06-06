@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "seed": "node -r dotenv/config ./scripts/seed.js",
-    "update": "node -r ./scripts/talkToDBa.ts"
+    "update": "node -r ./app/lin/talkToDBa.ts"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",

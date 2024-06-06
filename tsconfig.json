@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "app/systems",
     "app/api/tables.js",
-    "scripts/talkToDBa.ts"
+    "app/lib/talkToDBa.ts"
   ],
   "exclude": ["node_modules"]
 }
