@@ -4,11 +4,28 @@ import Btn from "../components/atoms/Btn";
 import { IraqsLogo, IraqsIcon } from "../components/atoms/IraqsLogo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Header() {
-  
   const url = `https://wa.me/+9647722284333`;
   const pathname = usePathname();
+
+  const [scrollWidth, setScrollWidth] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      // Calculate the width of the indicator based on scroll position
+      const { scrollTop, scrollHeight, clientHeight } =
+        document.documentElement;
+      const scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+      setScrollWidth(scrollPercent);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header
@@ -77,9 +94,13 @@ export default function Header() {
         </a>
       </div>
       <div
-        className={` ${styles.indicator} h-[3px] w-[100vw] top-[72px] bg-[var(--sc32)] fixed z-30 flex`}
+        className={` ${styles.indicator} h-[5px] w-[100vw] top-[72px] bg-[var(--sc32)] fixed z-30 flex`}
       >
-        <div id="indicator" className="h-full  bg-[var(--yo)]" />
+        <div
+          id="indicator"
+          className="h-full bg-[var(--yo)]"
+          style={{ width: `${scrollWidth}%` }}
+        />
       </div>
     </header>
   );

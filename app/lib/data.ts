@@ -1,3 +1,4 @@
+
 import { sql } from "@vercel/postgres";
 import {
   // CustomerField,
@@ -26,3 +27,5 @@ export async function fetchUpdates(): Promise<Updates[]> {
     // throw new Error("Failed to fetch the latest updates.");
   }
 }
+
+
