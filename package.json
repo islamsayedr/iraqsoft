@@ -10,7 +10,7 @@
     "lint": "next lint",
     "seed": "node -r dotenv/config ./scripts/seed.js",
     "postinstall":"npx prisma generate",
-    "update": "node -r ./app/lin/talkToDBa.ts"
+    "update": "node -r ./app/lib/talkToDBa.ts"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",

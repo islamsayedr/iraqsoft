@@ -1,11 +1,26 @@
 // import { updates } from "@/app/lib/dummyData";
 import UpdateCard from "../ui/components/molecules/UpdateCard";
-import { fetchUpdates } from "../lib/data";
-import { Updates } from "../lib/definitions";
+// import { fetchUpdates } from "../lib/data";
+// import { Updates } from "../lib/definitions";
+import { getUpdates } from "../lib/talkToDBa";
+import { UpdateResponse, Update } from "../lib/definitions";
 
 export default async function page() {
-  const updates: Updates[] = await fetchUpdates();
-
+  const updates: UpdateResponse = await getUpdates();
+  if ("error" in updates) {
+    return (
+      <main>
+        <section className="bg-white">
+          <div className="container flex-col md:gap-12 gap-6">
+            <h2 className="title">اخر الاخبار والتحديثات</h2>
+            <div className="flex w-full gap-4 justify-center flex-wrap">
+              <p>Error: {updates.error}</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    );
+  }
   return (
     <main>
       <section className={`bg-white`}>
@@ -18,8 +33,9 @@ export default async function page() {
                 id={event.id}
                 title={event.title}
                 des={event.des}
-                date={event.date.toLocaleDateString()}
+                date={event.createdAt.toLocaleDateString()}
                 cover={event.cover}
+                video={event.video}
               />
             ))}
           </div>
@@ -28,4 +44,3 @@ export default async function page() {
     </main>
   );
 }
-// dch

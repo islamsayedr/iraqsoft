@@ -2,13 +2,24 @@
 // It describes the shape of the data, and what data type each property should accept.
 // For simplicity of teaching, we're manually defining these types.
 // However, these types are generated automatically if you're using an ORM such as Prisma.
-export type Updates = {
+// export type Updates = {
+//   id: string;
+//   title: string;
+//   des: string;
+//   date: Date;
+//   cover: string;
+// };
+export type Update = {
   id: string;
   title: string;
   des: string;
-  date: Date;
+  createdAt: Date;
   cover: string;
+  video: string;
+  userId: string;
 };
+
+export type UpdateResponse = Update[] | { error: string };
 // export type User = {
 //   id: string;
 //   name: string;

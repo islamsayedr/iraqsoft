@@ -9,6 +9,7 @@ type updatesProps = {
   des: string;
   cover: string;
   date: string;
+  video: string;
 };
 
 export default function UpdateCard({
@@ -17,12 +18,13 @@ export default function UpdateCard({
   des,
   cover,
   date,
+  video,
 }: updatesProps) {
   const [read, setRead] = useState(false);
   const [play, setPlay] = useState(false);
-  const [url] = useState(
-    `https://www.youtube.com/embed/pctmnCCqXi4?controls=0&autoplay=1&modestbranding=1`
-  );
+  // const [url] = useState(
+  //   `https://www.youtube.com/embed/pctmnCCqXi4?controls=0&autoplay=1&modestbranding=1`
+  // );
   const handleDrag = () => {
     setRead(!read);
   };
@@ -48,7 +50,7 @@ export default function UpdateCard({
               height: "100%",
               display: `${!play ? "none" : "block"}`,
             }}
-            src={url}
+            src={video}
             title="التحديث الجديد حسابات الابراج"
             allow={`accelerometer; encrypted-media; gyroscope; autoplay; web-share`}
             referrerPolicy="strict-origin-when-cross-origin"

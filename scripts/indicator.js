@@ -8,3 +8,6 @@ window.addEventListener("scroll", () => {
   const indicator = document.querySelector("#indicator");
   if (indicator) indicator.style.width = `${indicatorWidth}%`;
 });
+
+
+

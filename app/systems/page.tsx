@@ -2,6 +2,8 @@ import { ProductsData } from "@/app/lib/dummyData";
 import ProductCard from "../ui/components/molecules/ProductCard";
 
 export default function page() {
+
+  
   return (
     <main>
       <section className={`bg-white`}>

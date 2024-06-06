@@ -9,16 +9,16 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model User {
+model user {
   id    String   @id @default(cuid())
   name   String
   password   String
   email  String @unique
-  role   Role    @default(USER)
-  updates Updates[]
+  role   role    @default(USER)
+  updates updates[]
   systems systems[]
 }
-model Updates {
+model updates {
   id    String   @id @default(cuid())
   title String
   des String
@@ -26,7 +26,7 @@ model Updates {
   cover String
   video String
 
-  author User   @relation(fields: [userId], references: [id])
+  author user   @relation(fields: [userId], references: [id])
   userId String
 }
 model systems {
@@ -36,16 +36,16 @@ model systems {
   createdAt DateTime @default(now())
   cover String
   price Int
-  platforms Platform[]  // platforms
+  platforms platform[]  // platforms
   landingLink String
-  author User   @relation(fields: [userId], references: [id])
+  author user   @relation(fields: [userId], references: [id])
   userId String
 }
-enum Role {
+enum role {
   USER
   ADMIN
 }
-enum Platform {
+enum platform {
   WINDOWS
   MAC
   LINUX
