@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "vercel-build": "npx prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "seed": "node -r dotenv/config ./scripts/seed.js",
+    "postinstall":"npx prisma generate",
     "update": "node -r ./app/lin/talkToDBa.ts"
   },
   "dependencies": {
