@@ -4,12 +4,17 @@ import styles from "./LatestUpdates.module.css";
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, PanInfo } from "framer-motion";
 import Btn from "../components/atoms/Btn";
-import { updates } from "../../lib/dummyData";
+// import { updates } from "../../lib/dummyData";
 import { ArrowLeft, ArrowRight } from "../components/atoms/icons/index";
 import UpdateCard from "../components/molecules/UpdateCard";
 // import { useNavigate } from "react-router-dom";
+import { Update } from "../../lib/definitions";
 
-export default function LatestUpdates() {
+interface LatestUpdatesProps {
+  updates: Update[];
+  error?: string;
+}
+export default function LatestUpdates({ updates, error }: LatestUpdatesProps) {
   const [width, setWidth] = useState(0);
   const [currentPos, setCurrentPos] = useState(0);
   const [swipeDistanceVW, setSwipeDistanceVW] = useState(60);
@@ -62,6 +67,18 @@ export default function LatestUpdates() {
     const newPosition = currentPos - offset;
     setCurrentPos(Math.max(Math.min(newPosition, 0), -width));
   };
+  if (error) {
+    return (
+      <section className="bg-white">
+        <div className="container flex-col md:gap-12 gap-6">
+          <h2 className="title">اخر الاخبار والتحديثات</h2>
+          <div className="flex w-full gap-4 justify-center flex-wrap">
+            <p>Error: {error}</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
   return (
     <section className={styles.popular}>
       <div className={`container ${styles.container}`}>
@@ -85,12 +102,13 @@ export default function LatestUpdates() {
             {updates.map((event) => (
               <motion.div className={`flex w-auto `} key={event.id}>
                 <UpdateCard
+                  key={event.id}
                   id={event.id}
                   title={event.title}
                   des={event.des}
-                  date={event.date}
+                  date={event.createdAt.toLocaleDateString()}
                   cover={event.cover}
-                  video=""
+                  video={event.video}
                 />
               </motion.div>
             ))}

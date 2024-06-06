@@ -1,3 +1,4 @@
+'use client'
 import HeroArt from "../components/atoms/illu/HeroArt";
 import Btn from "../components/atoms/Btn";
 import StarRate from "../components/molecules/StarRate";

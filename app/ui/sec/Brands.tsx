@@ -1,3 +1,4 @@
+
 import BarndLogo from "../components/atoms/BrandLogo";
 const img1 = "./imgs/client01.png";
 const img2 = "./imgs/client02.png";

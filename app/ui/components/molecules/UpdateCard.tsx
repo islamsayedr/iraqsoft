@@ -1,5 +1,5 @@
 "use client";
-
+import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { DownArrows, Play, UpArrows } from "../atoms/icons";
 
@@ -41,7 +41,7 @@ export default function UpdateCard({
       <div
         style={{ backgroundImage: `url(${cover})` }}
         id="player"
-        className="absolute top-0 left-0 w-full h-full bg-[var(--sc)] bg-cover  flex items-center  justify-center"
+        className="absolute top-0 left-0 w-full h-full bg-[var(--sc)] bg-cover  flex items-center justify-center"
       >
         {play ? (
           <iframe
@@ -59,26 +59,36 @@ export default function UpdateCard({
         ) : (
           ""
         )}
-
-        <Play
+        <div
+          className={clsx(
+            "cursor-pointer relative",
+            { hidden: play },
+            { block: !play }
+          )}
           onClick={handlePlay}
-          className={`cursor-pointer ${play ? "hidden" : "block"}`}
-        />
+        >
+          <Play />
+          <div className="absolute top-0 w-full h-full bg-[var(--yo)] rounded-full animate-ping opacity-75"></div>
+        </div>
       </div>
 
       <div
-        className={`p-6  flex flex-col bg-gradient-to-b ${
-          read
-            ? "max-h-full h-fit from-[#3F336900] gap-2 pb-10 pb-14"
-            : "h-[138px] from-[#3F336900] "
-        }   to-[#3F3369] transition-all ease-in-out z-10 cursor-pointer`}
+        className={clsx(
+          "p-6 w-full flex flex-col bg-gradient-to-b to-[#3F3369] transition-all ease-in-out z-10 cursor-pointer",
+          { "max-h-full h-fit from-[#3F336900] gap-2 pb-10 pb-14": read },
+          { "h-[138px] from-[#3F336900] ": !read }
+        )}
         onClick={handleDrag}
       >
-        <div className="flex items-center justify-center ">
-          <h3 className="text-white flex-1 truncate overflow-hidden text-ellipsis ">
+        <div className="flex items-top gap-4 w-full justify-center ">
+          <h3
+            className={clsx("text-white flex-1 font-md ", {
+              "truncate overflow-hidden": !read,
+            })}
+          >
             {title}
           </h3>
-          <span className="text-white ">{date}</span>
+          <span className="text-white leading-loose">{date}</span>
         </div>
         <p
           className={`text-white flex-1  text-ellipsis ${

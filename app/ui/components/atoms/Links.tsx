@@ -75,7 +75,7 @@ export function LocationLink({ location }: LocationProps) {
       className="flex gap-2 leading-6 font-medium text-[var(--sc)] hover:text-[var(--pc)] hover:underline"
     >
       <Location />
-      {location}
+      <span className="flex-1 hover:text-[var(--pc)]">{location}</span>
     </a>
   );
 }

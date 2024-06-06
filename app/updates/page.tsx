@@ -1,7 +1,4 @@
-// import { updates } from "@/app/lib/dummyData";
 import UpdateCard from "../ui/components/molecules/UpdateCard";
-// import { fetchUpdates } from "../lib/data";
-// import { Updates } from "../lib/definitions";
 import { getUpdates } from "../lib/talkToDBa";
 import { UpdateResponse, Update } from "../lib/definitions";
 

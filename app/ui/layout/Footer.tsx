@@ -49,7 +49,7 @@ export default function Footer() {
                   <PhoneLink phone="07722284111" />
                 </div>
                 <div className="flex flex-1 max-w-[350px]">
-                  <LocationLink location="العراق - بغداد -شارع الصناعه - مجاور الجامعة التكنولوجية-شارع معهد مرجان" />
+                  <LocationLink  location="العراق - بغداد -شارع الصناعه - مجاور الجامعة التكنولوجية-شارع معهد مرجان" />
                 </div>
               </div>
             </div>
